@@ -1,0 +1,38 @@
+public class GenericExample {
+	public static <E> void printArray(E[] inputArray) {
+		for (E element : inputArray) {
+			System.out.printf("%s", element);
+		}
+		System.out.println();
+	}
+
+	public static <E extends Comparable<E>> E max(E[] a)
+
+	{
+		int i, j;
+		E temp;
+		for (i = 0; i < a.length; i++)
+		{
+			if (a[i].compareTo(a[j] > 0)) {
+				temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+			}
+		return (a[a.length - 1]);
+	}
+	}
+	public static void main(String[] args) {
+		Integer[] intArray = { 10, 1, 5, 12, 3, 5, };
+		Double[] doubleArray = { 10.2, 11.3, 3.2, 4.9, 5.8, 7.7, 8.8, 9.3 };
+		Character[] charArray = { 'W', 'E', 'l', 'C', 'O', 'M', 'E' };
+		System.out.print("Given integer is");
+		printArray(intArray);
+		System.out.println("Given Double Array is");
+		printArray(doubleArray);
+		System.out.println("enter the character Array is");
+		printArray(charArray);
+		System.out.print("maximum of integer Array is" + max(intArray));
+		System.out.println("maximum of double Array is" + max(doubleArray));
+		System.out.println("maximum of characte Array is " + max(charArray));
+	}
+}
