@@ -1,0 +1,21 @@
+import java.lang.*;
+
+public class StringBufferDemo {
+
+   public static void main(String[] args) {
+
+      StringBuffer buff = new StringBuffer("sarathi");
+      System.out.println("buffer = " + buff);
+
+      
+      int retval = buff.codePointBefore(3);
+      System.out.println("Character(unicode point) = " + retval);
+
+      buff = new StringBuffer("amrood admin ");
+      buff.append("sarathi");
+      System.out.println("buffer = " + buff);
+
+      
+      retval = buff.codePointBefore(6);
+      System.out.println("Character(unicode point) = " + retval);
+	}
